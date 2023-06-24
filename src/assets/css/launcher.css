@@ -8,10 +8,13 @@
 }
 
 body {
-    margin: 0;
-    padding: 0;
-    user-select: none;
-    background: linear-gradient(#00000066, #00000066), url("../images/background/light.jpg") black no-repeat center center scroll;
+    height: 90%;
+
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url("../images/background/fond.png");
 }
 
 img {
