@@ -30,6 +30,13 @@ class Login {
     }
 
     getOffline() {
+
+        console.log('verifie login enrengistré: ok ')
+if(localStorage.getItem("name")){
+    console.log('ID trouver')
+    document.getElementById("name").value = localStorage.getItem("name");
+    console.log('ID appliqué')
+}
         console.log(`Initializing microsoft Panel...`)
         console.log(`Initializing mojang Panel...`)
         console.log(`Initializing offline Panel...`)
