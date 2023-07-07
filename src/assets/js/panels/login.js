@@ -190,13 +190,14 @@ if(localStorage.getItem("name")){
     }
 
     async loginOffline() {
+        
         let mailInput = document.querySelector('.Mail')
         let passwordInput = document.querySelector('.Password')
         let cancelMojangBtn = document.querySelector('.cancel-mojang')
         let infoLogin = document.querySelector('.info-login')
         let loginBtn = document.querySelector(".login-btn")
         let mojangBtn = document.querySelector('.mojang')
-
+       
         mojangBtn.innerHTML = "Offline"
 
         mojangBtn.addEventListener("click", () => {
