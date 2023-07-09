@@ -192,7 +192,14 @@
     position: relative;
     width: 100%;
 }
-
+.actu {
+    height:calc(100%-290px);
+    overflow:auto;
+   position: absolute;
+   margin-top: 6%;
+   width: 80%;
+   height: 65%;
+}
 .bbWrapper {
     position: relative;
     padding: 20px;
