@@ -197,8 +197,14 @@
     overflow:auto;
    position: absolute;
    margin-top: 6%;
-   width: 80%;
+   margin-bottom: 6%;
+   margin-left: 10%;
+   width: 60%;
    height: 65%;
+   backdrop-filter: url(filters.svg#filter) blur(10px) saturate(150%);
+   overflow: hidden;
+   border-radius: 10%;
+
 }
 .bbWrapper {
     position: relative;
