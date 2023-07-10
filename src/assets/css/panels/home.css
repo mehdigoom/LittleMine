@@ -266,6 +266,13 @@
     left: 70px;
     transition: color .2s;
 }
+.namedev {
+    position: absolute;
+    font: normal normal bold 17px/25px Poppins;
+    color: #E1E1E1;
+
+    transition: color .2s;
+}
 
 .desc {
     position: absolute;
