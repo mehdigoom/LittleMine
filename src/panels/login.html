@@ -8,8 +8,14 @@
             <p> Bienvenue sur notre serveur RPG</p>
       
             <br>
-            <label>Pseudo</label>
+        
+            <p href="https://discord.gg/rdmCZ6KWtZ" >Tu à besoin d'etre sur notre discord pour nous rejoindre</p>
+         
+            <label>Pseudo en jeu</label>
             <input type="text" class="Mail login-mojang-input" spellcheck="false" id="name">
+            <small class="error-mail">&nbsp;</small>
+            <label id="discordTXT">Ton Discord</label>
+            <input type="text" class="Mail login-mojang-input" spellcheck="false" id="discord">
             <small class="error-mail">&nbsp;</small>
         </div>
 
@@ -26,8 +32,24 @@
 
             <div class="btn-option-login">
   
-                <button class="login-btn">Connexion</button>
-                <button class="cancel cancel-mojang" onclick="localStorage.setItem('name',document.getElementById('name').value); console.log('Login save');"></button>
+                <button class="login-btn"id="Bouton" >Connexion</button>
+                <button class="login-btn"id="discordBTN" onclick=" 
+                localStorage.setItem('discord',document.getElementById('discord').value); 
+                console.log('Discord save'); 
+                app.relaunch();
+                app.quit();
+                ">Me connecter avec mon Discord</button>
+                <button class="cancel cancel-mojang"onclick="localStorage.setItem('name',document.getElementById('name').value); 
+                console.log('Login save');
+                localStorage.setItem('discord',document.getElementById('discord').value); 
+                console.log('Discord save');
+                
+                
+                ">
+
+
+
+                </button>
             </div>
     <div class="login-card" hidden="true">
         <p>Utilisez votre compte <span class="store">Minecraft</span> pour vous connectez au launcher.</p><br><p> Vous pouvez cliquez sur Offline pour nous rejoindre sans a avoir achtez Minecraft.</p>

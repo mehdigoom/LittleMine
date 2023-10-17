@@ -37,6 +37,71 @@ if(localStorage.getItem("name")){
     document.getElementById("name").value = localStorage.getItem("name");
     console.log('ID appliqué')
 }
+if(localStorage.getItem("discord")){
+    console.log('discord trouver')
+    document.getElementById("discord").value = localStorage.getItem("discord");
+    console.log('discord appliqué')
+    console.log('Call discord API')
+    const url = 'https://discordapp.com/api/guilds/1079798883342876703/widget.json';
+
+    // Utilisation de l'API Fetch pour récupérer le JSON
+    fetch(url)
+      .then(response => {
+        if (!response.ok) {
+          throw new Error('Erreur de réseau');
+        }
+        return response.json(); // Convertit la réponse en JSON
+      })
+      .then(data => {
+        // Faites quelque chose avec les données JSON récupérées
+       // console.log(data);
+        console.log('REPONSE API OK ')
+        function findMemberByUsername(jsonData, username) {
+            const member = jsonData.members.find(member => member.username === username);
+            return member;
+          }
+          
+          const usernameToFind = localStorage.getItem("discord"); // Nom d'utilisateur du membre que vous souhaitez trouver
+          const foundMember = findMemberByUsername(data, usernameToFind);
+          
+          if (foundMember) {
+            const bouton = document.getElementById("discordBTN");
+            bouton.style.display = "none"; // Pour le rendre invisible
+            const discordCHAMP = document.getElementById("discord");
+            discordCHAMP.style.display = "none"; // Pour le rendre invisible
+            const discordTXT = document.getElementById("discordTXT");
+            discordTXT.style.display = "none"; // Pour le rendre invisible
+
+
+            console.log("Membre trouvé :");
+            console.log("ID : " + foundMember.id);
+            console.log("Username : " + foundMember.username);
+            console.log("Discriminator : " + foundMember.discriminator);
+
+          } else {
+            console.log("Membre non trouvé.");
+            const bouton = document.getElementById("Bouton");
+            bouton.style.display = "none"; // Pour le rendre invisible
+            localStorage.removeItem("discord")
+          }
+
+
+
+
+      })
+      .catch(error => {
+        console.log('API ERREUR API ')
+        console.error('Erreur :', error);
+      });
+      console.log('Fin call API ')
+} else{
+
+    const bouton = document.getElementById("Bouton");
+    bouton.style.display = "none"; // Pour le rendre invisible
+}
+
+
+
         console.log(`Initializing microsoft Panel...`)
         console.log(`Initializing mojang Panel...`)
         console.log(`Initializing offline Panel...`)
