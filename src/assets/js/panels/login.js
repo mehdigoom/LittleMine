@@ -83,6 +83,8 @@ if(localStorage.getItem("discord")){
             const bouton = document.getElementById("Bouton");
             bouton.style.display = "none"; // Pour le rendre invisible
             localStorage.removeItem("discord")
+            const paragraph = document.getElementById('msg');
+            paragraph.textContent = 'Tu es pas su notre discord ! rejoin nous pour pouvoir jouer !';
           }
 
 

@@ -9,7 +9,7 @@
       
             <br>
         
-            <p href="https://discord.gg/rdmCZ6KWtZ" >Tu à besoin d'etre sur notre discord pour nous rejoindre</p>
+            <p href="https://discord.gg/rdmCZ6KWtZ" id="msg">Tu à besoin d'etre sur notre discord pour nous rejoindre</p>
          
             <label>Pseudo en jeu</label>
             <input type="text" class="Mail login-mojang-input" spellcheck="false" id="name">
@@ -36,15 +36,17 @@
                 <button class="login-btn"id="discordBTN" onclick=" 
                 localStorage.setItem('discord',document.getElementById('discord').value); 
                 console.log('Discord save'); 
-                app.relaunch();
-                app.quit();
+                const paragraph = document.getElementById('msg');
+                paragraph.textContent = 'Veuillez redemarrer le Launcher';
+
                 ">Me connecter avec mon Discord</button>
                 <button class="cancel cancel-mojang"onclick="localStorage.setItem('name',document.getElementById('name').value); 
                 console.log('Login save');
                 localStorage.setItem('discord',document.getElementById('discord').value); 
                 console.log('Discord save');
                 
-                
+
+ 
                 ">
 
 
