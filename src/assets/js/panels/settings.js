@@ -32,24 +32,7 @@ class Settings {
                 this.database.update({ uuid: "1234", selected: uuid }, 'accounts-selected');
             }
 
-            if (e.target.classList.contains("account-delete")) {
-                this.database.delete(e.path[1].id, 'accounts');
 
-                document.querySelector('.accounts').removeChild(e.path[1])
-                if (!document.querySelector('.accounts').children.length) {
-                    changePanel("login");
-                    return
-                }
-
-                if (e.path[1].id === selectedaccount.value.selected) {
-                    let uuid = (await this.database.getAll('accounts'))[0].value.uuid
-                    this.database.update({
-                        uuid: "1234",
-                        selected: uuid
-                    }, 'accounts-selected')
-                    accountSelect(uuid)
-                }
-            }
         })
 
         document.querySelector('.add-account').addEventListener('click', () => {

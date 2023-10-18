@@ -36,6 +36,19 @@ if(localStorage.getItem("name")){
     console.log('ID trouver')
     document.getElementById("name").value = localStorage.getItem("name");
     console.log('ID appliqué')
+    const pseau = document.getElementById("pseau");
+    pseau.style.display = "none"; // Pour le rendre invisible
+    
+    
+    var paragraphe = document.getElementById("slt");
+        paragraphe.textContent = "Salut, "+ localStorage.getItem("name") + " !";
+ 
+
+
+
+
+
+
 }
 if(localStorage.getItem("discord")){
     console.log('discord trouver')
@@ -73,6 +86,8 @@ if(localStorage.getItem("discord")){
             discordTXT.style.display = "none"; // Pour le rendre invisible
             const discordMSG = document.getElementById("msg");
             discordMSG.style.display = "none"; // Pour le rendre invisible
+            const disc= document.getElementById("disc");
+            disc.style.display = "none"; // Pour le rendre invisible
 
 
             console.log("Membre trouvé :");
