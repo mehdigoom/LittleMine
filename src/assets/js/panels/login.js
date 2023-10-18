@@ -71,6 +71,8 @@ if(localStorage.getItem("discord")){
             discordCHAMP.style.display = "none"; // Pour le rendre invisible
             const discordTXT = document.getElementById("discordTXT");
             discordTXT.style.display = "none"; // Pour le rendre invisible
+            const discordMSG = document.getElementById("msg");
+            discordMSG.style.display = "none"; // Pour le rendre invisible
 
 
             console.log("Membre trouvé :");
@@ -84,7 +86,7 @@ if(localStorage.getItem("discord")){
             bouton.style.display = "none"; // Pour le rendre invisible
             localStorage.removeItem("discord")
             const paragraph = document.getElementById('msg');
-            paragraph.textContent = 'Tu es pas su notre discord ! rejoin nous pour pouvoir jouer !';
+            paragraph.textContent = 'Tu es pas sur notre discord ! rejoin nous pour pouvoir jouer !';
           }
 
 

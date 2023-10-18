@@ -1,7 +1,7 @@
 {
     "name": "littlecaft",
     "preductname": "Littlecraft",
-    "version": "2.1.8",
+    "version": "2.1.9",
     "description": "Launcher Mincraft custom (crack, premium)",
     "main": "src/app.js",
     "author": "Miro",
