@@ -43,13 +43,23 @@ if(localStorage.getItem("name")){
     var paragraphe = document.getElementById("slt");
         paragraphe.textContent = "Salut, "+ localStorage.getItem("name") + " !";
  
+        var imageAvatar = document.getElementById("avatar");
+            imageAvatar.src = "https://minotar.net/helm/"+ localStorage.getItem("name")+"/100";
 
 
 
 
 
+}else{
+    const image = document.getElementById("avatar");
+    image.style.display = "none"; // Pour le rendre invisible
+    
+    
+    const pseau = document.getElementById("slt");
+    pseau.style.display = "none"; // Pour le rendre invisible
+    
 
-}
+ }
 if(localStorage.getItem("discord")){
     console.log('discord trouver')
     document.getElementById("discord").value = localStorage.getItem("discord");
