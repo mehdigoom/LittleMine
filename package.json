@@ -1,7 +1,7 @@
 {
-    "name": "pokeunivers",
-    "preductname": "Littlecraft",
-    "version": "2.2.1",
+    "name": "littlecaft",
+    "preductname": "pokeunivers",
+    "version": "2.2.2",
     "description": "Launcher Mincraft custom (crack, premium)",
     "main": "src/app.js",
     "author": "Miro",
