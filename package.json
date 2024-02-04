@@ -1,11 +1,11 @@
 {
     "name": "littlecaft",
     "preductname": "pokeunivers",
-    "version": "2.2.2",
+    "version": "2.2.3",
     "description": "Launcher Mincraft custom (crack, premium)",
     "main": "src/app.js",
     "author": "Miro",
-    "url": "https://optimistic-liskov.85-215-212-167.plesk.page/",
+    "url": "http://85.215.212.167/",
     "engines": {
         "node": "^18.x.x"
     },
